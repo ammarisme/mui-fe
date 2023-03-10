@@ -9,6 +9,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
 import SearchIcon from '@material-ui/icons/Search';
+import Settings from '@material-ui/icons/Settings';
 import CloudIcon from '@material-ui/icons/Cloud';
 import {NavLink} from 'react-router-dom';
 
@@ -50,6 +51,22 @@ class TemporaryDrawer extends Component {
                 </List>
                 <Divider />
                 <List>
+
+
+                    <NavLink className={"unactivePage"}  activeClassName="activePage" exact to="/settings" style={style_unset}>
+                        <ListItem button key={'Settings'}>
+                            <ListItemIcon><Settings /></ListItemIcon>
+                            <ListItemText primary={'Settings'} />
+                        </ListItem>
+                    </NavLink>
+
+
+                    <ListItem button key={'Version'}>
+                        <ListItemIcon><CloudIcon /></ListItemIcon>
+                        <ListItemText primary={'Version'} secondary={"v0.1"}/>
+                    </ListItem>
+
+
                 </List>
             </div>
         );

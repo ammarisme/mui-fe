@@ -4,7 +4,7 @@ import './App.css';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 // Material UI Imports
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { MuiThemeProvider, createTheme } from '@material-ui/core/styles';
 import {CssBaseline} from "@material-ui/core";
 
 // Component Imports
@@ -14,7 +14,6 @@ import AppBar from "./components/AppBar";
 import HomePage from "./components/pages/HomePage";
 import NoPageFound from "./components/pages/NoPageFound";
 import TestPage from "./components/pages/TestPage";
-import SettingsPage from "./components/pages/SettingsPage";
 
 // Action Imports
 import {setSettings} from "./actions/settings-actions";
@@ -38,7 +37,7 @@ class App extends Component {
 
   render() {
 
-    const theme = createMuiTheme(this.props.settings);
+    const theme = createTheme(this.props.settings);
 
     return (
         <MuiThemeProvider theme={theme}>
@@ -48,7 +47,6 @@ class App extends Component {
               <Switch>
                 <Route path={"/"} exact /*strict*/ component={HomePage}/>
                 <Route path={"/test"} exact /*strict*/ component={TestPage}/>
-                <Route path={"/settings"} exact /*strict*/ component={SettingsPage}/>
                 <Route exact /*strict*/ component={NoPageFound}/>
               </Switch>
           </Router>

@@ -27,7 +27,22 @@ class HomePage extends Component {
                 >
                     <Grid item xs={6} style={{maxWidth:'90vw'}}>
                         <Paper style={{marginTop:"10px",textAlign:"center"}}>
-                            {/* <button onClick={this.props.setTest(this.props.home.test-1)}></button> */}
+                            <Typography variant="h4" gutterBottom style={{padding:"10px"}}>
+                                {"Home Page"}
+                            </Typography>
+                            <Typography variant="h5" gutterBottom style={{padding:"10px"}}>
+                                <Fab color="primary" style={{marginRight:"20px"}} onClick={
+                                    ()=>{this.props.setTest(this.props.home.test-1)}
+                                }>
+                                    <RemoveIcon/>
+                                </Fab>
+                                {this.props.home.test}
+                                <Fab color="primary" style={{marginLeft:"20px"}} onClick={
+                                    ()=>{this.props.setTest(this.props.home.test+1)}
+                                }>
+                                    <AddIcon/>
+                                </Fab>
+                            </Typography>
                         </Paper>
                     </Grid>
                 </Grid>

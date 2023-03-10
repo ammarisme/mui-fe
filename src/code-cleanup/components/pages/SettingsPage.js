@@ -86,7 +86,7 @@ class SettingsPage extends Component {
                 spacing={0}
                 direction="column"
                 alignItems="center"
-                justify="center"
+                justifyContent="center"
                 style={{ minHeight: '90vh' }}
             >
                 <Grid item xs={6} style={{maxWidth:'90vw'}}>
