@@ -7,7 +7,7 @@ import Chip from '@material-ui/core/Chip';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Slider from '@material-ui/lab/Slider';
+// import Slider from '@material-ui/lab/Slider';
 import Switch from '@material-ui/core/Switch';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
@@ -151,7 +151,7 @@ class SettingsPage extends Component {
                             {"Font Size"}
                         </Typography>
                         <Divider />
-                        <div style={{width:"300px",margin:"auto"}}>
+                        {/* <div style={{width:"300px",margin:"auto"}}>
                             <Slider
                                 classes={{ container: classes.slider }}
                                 value={this.props.settings.typography.fontSize}
@@ -161,7 +161,7 @@ class SettingsPage extends Component {
                                 max={24}
                                 step={0.5}
                             />
-                        </div>
+                        </div> */}
                         </div>
                     </Paper>
             </div>
